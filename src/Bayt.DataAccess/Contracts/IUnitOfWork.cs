@@ -21,6 +21,5 @@ public interface IUnitOfWork:IDisposable
     IRepository<Country> CountryRepository { get; }
     IRepository<Region> RegionRepository { get; }
     IRepository<District> DistrictRepository { get; }
-
     Task SaveAsync();
 }

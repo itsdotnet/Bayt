@@ -15,7 +15,6 @@ namespace Bayt.DataAccess.Repositories;
 public class UnitOfWork:IUnitOfWork
 {
     private readonly BaytDbContext _context;
-
     
     public UnitOfWork(BaytDbContext context, IRepository<User> userRepository, 
         IRepository<Attachment> attachmentRepository,IRepository<Company> companyRepository,
@@ -35,7 +34,6 @@ public class UnitOfWork:IUnitOfWork
         DistrictRepository = districtRepository;
     }
 
-
     public IRepository<User> UserRepository { get; }
     public IRepository<Attachment> AttachmentRepository { get; }
     public IRepository<Company> CompanyRepository { get; }
@@ -45,10 +43,8 @@ public class UnitOfWork:IUnitOfWork
     public IRepository<Country> CountryRepository { get; }
     public IRepository<Region> RegionRepository { get; }
     public IRepository<District> DistrictRepository { get; }
-
     
     public async Task SaveAsync() => await _context.SaveChangesAsync();
-    
     
     public void Dispose()
     {
