@@ -7,4 +7,9 @@
   </PropertyGroup>
 
 
+
+  <ItemGroup>
+    <Folder Include="Entities\Roommates\" />
+  </ItemGroup>
+
 </Project>
