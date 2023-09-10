@@ -1,6 +1,6 @@
 namespace Bayt.Service.DTOs.Companies;
 
-public class CompanyUupdateDto
+public class CompanyUpdateDto
 {
     public Guid Id { get; set; }
     public string Name { get; set; }

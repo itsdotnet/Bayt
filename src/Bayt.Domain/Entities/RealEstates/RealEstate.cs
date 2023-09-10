@@ -28,6 +28,4 @@ public class RealEstate:Auditable
 
     public Guid UserId { get; set; }
     public User User { get; set; }
-
-    public ICollection<Attachment> Attachments { get; set; }
 }
