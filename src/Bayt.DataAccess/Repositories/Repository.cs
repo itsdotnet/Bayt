@@ -12,7 +12,7 @@ public class Repository<TEntity>:IRepository<TEntity> where TEntity:Auditable
     private readonly DbSet<TEntity> _dbSet;
 
     
-    public Repository(BaytDbContext context, DbSet<TEntity> dbSet)
+    public Repository(BaytDbContext context)
     {
         _context = context;
         _dbSet = _context.Set<TEntity>();
@@ -31,11 +31,11 @@ public class Repository<TEntity>:IRepository<TEntity> where TEntity:Auditable
     public void Destroy(TEntity entity) => _dbSet.Remove(entity);
 
     
-    public async Task<TEntity> SelectAsync(Expression<Func<TEntity, bool>> expression = null, string[] includes = null)
+    public async Task<TEntity> SelectAsync(Expression<Func<TEntity, bool>> expression, string[] includes = null)
     {
         IQueryable<TEntity> entities = expression == null 
-                                            ? _dbSet.AsQueryable() 
-                                                : _dbSet.Where(expression).AsQueryable();
+            ? _dbSet.AsQueryable() 
+                : _dbSet.Where(expression).AsQueryable();
 
         foreach (var include in includes)
             entities = entities.Include(include);
@@ -47,8 +47,8 @@ public class Repository<TEntity>:IRepository<TEntity> where TEntity:Auditable
     public IQueryable<TEntity> SelectAll(Expression<Func<TEntity, bool>> expression = null, string[] includes = null, bool isTracking = true)
     {
         IQueryable<TEntity> entities = expression == null 
-                                            ? _dbSet.AsQueryable() 
-                                                : _dbSet.Where(expression).AsQueryable();
+            ? _dbSet.AsQueryable() 
+                : _dbSet.Where(expression).AsQueryable();
 
         entities = isTracking ? entities.AsNoTracking() : entities;
         
