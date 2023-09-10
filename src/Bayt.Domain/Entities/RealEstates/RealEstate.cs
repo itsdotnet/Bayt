@@ -1,5 +1,6 @@
 using Bayt.Domain.Commons;
 using Bayt.Domain.Entities.Addresses.Addresses;
+using Bayt.Domain.Entities.Attachments;
 using Bayt.Domain.Entities.Categories;
 using Bayt.Domain.Entities.Users;
 using Bayt.Domain.Enums;
@@ -27,4 +28,6 @@ public class RealEstate:Auditable
 
     public Guid UserId { get; set; }
     public User User { get; set; }
+
+    public ICollection<Attachment> Attachments { get; set; }
 }
