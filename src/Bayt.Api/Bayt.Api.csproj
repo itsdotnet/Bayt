@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Bayt.DataAccess\Bayt.DataAccess.csproj" />
     <ProjectReference Include="..\Bayt.Domain\Bayt.Domain.csproj" />
+    <ProjectReference Include="..\Bayt.Service\Bayt.Service.csproj" />
   </ItemGroup>
 
 </Project>
