@@ -1,4 +1,5 @@
 
+using Bayt.Api.Extensions;
 using Bayt.DataAccess.Contexts;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,9 @@ namespace Bayt.Api
             {
                 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
+            
+            //Add Custom Services
+            builder.Services.AddCustomServices();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
