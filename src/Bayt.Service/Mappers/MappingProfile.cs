@@ -1,22 +1,22 @@
 using AutoMapper;
-using Bayt.Domain.Entities.Addresses.Addresses;
-using Bayt.Domain.Entities.Addresses.Countries;
-using Bayt.Domain.Entities.Addresses.Districts;
-using Bayt.Domain.Entities.Addresses.Regions;
-using Bayt.Domain.Entities.Categories;
-using Bayt.Domain.Entities.Companies;
-using Bayt.Domain.Entities.RealEstates;
+using Bayt.Service.DTOs.Users;
+using Bayt.Domain.Entities.Users;
+using Bayt.Service.DTOs.Roommates;
+using Bayt.Service.DTOs.Companies;
+using Bayt.Service.DTOs.Categories;
+using Bayt.Service.DTOs.RealEstates;
 using Bayt.Domain.Entities.Roommates;
+using Bayt.Domain.Entities.Companies;
+using Bayt.Domain.Entities.Categories;
+using Bayt.Domain.Entities.RealEstates;
+using Bayt.Service.DTOs.Addresses.Regions;
 using Bayt.Service.DTOs.Addresses.Addresses;
 using Bayt.Service.DTOs.Addresses.Countries;
 using Bayt.Service.DTOs.Addresses.Districts;
-using Bayt.Service.DTOs.Addresses.Regions;
-using Bayt.Service.DTOs.Categories;
-using Bayt.Service.DTOs.Companies;
-using Bayt.Service.DTOs.RealEstates;
-using Bayt.Service.DTOs.Roommates;
-using Bayt.Service.DTOs.Users;
-using Bayt.Domain.Entities.Users;
+using Bayt.Domain.Entities.Addresses.Regions;
+using Bayt.Domain.Entities.Addresses.Addresses;
+using Bayt.Domain.Entities.Addresses.Countries;
+using Bayt.Domain.Entities.Addresses.Districts;
 
 namespace Bayt.Service.Mappers;
 
