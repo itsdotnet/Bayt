@@ -8,6 +8,7 @@ using Bayt.Service.DTOs.RealEstates;
 using Bayt.Service.DTOs.Roommates;
 using Bayt.Service.DTOs.Users;
 using Bayt.Service.Exceptions;
+using Bayt.Service.Extensions;
 using Bayt.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -117,6 +118,9 @@ public class UserService:IUserService
 
     public async ValueTask<IEnumerable<UserResultDto>> GetAllAsync(PaginationParams @params)
     {
-        throw new NotImplementedException();
+        var users = await _unitOfWork.UserRepository
+            .SelectAll().ToPaginate(@params).ToListAsync();
+
+        return _mapper.Map<IEnumerable<UserResultDto>>(source: users);
     }
 }
