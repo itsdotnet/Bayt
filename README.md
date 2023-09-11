@@ -1,6 +1,6 @@
 # Bayt - Your Home Shopping Solution
 
-Bayt is a comprehensive home shopping platform that offers an easy and convenient way to buy and sell goods related to home improvement, decor, and more. Whether you're a homeowner looking for the perfect addition to your living space or a seller hoping to showcase your products, Bayt has you covered.
+Bayt is a comprehensive home shopping platform that offers an easy and convenient way to buy,sell,rent real estate.
 
 ## Features
 
