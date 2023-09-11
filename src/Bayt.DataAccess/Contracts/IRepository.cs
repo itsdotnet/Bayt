@@ -5,11 +5,11 @@ namespace Bayt.DataAccess.Contracts;
 
 public interface IRepository<TEntity> where TEntity : Auditable
 {
-    Task CreateAsync(TEntity entity);
+    ValueTask CreateAsync(TEntity entity);
     void Update(TEntity entity);
     void Delete(TEntity entity);
     void Destroy(TEntity entity);
-    Task<TEntity> SelectAsync(Expression<Func<TEntity, bool>> expression,string[] includes = null);
+    ValueTask<TEntity> SelectAsync(Expression<Func<TEntity, bool>> expression,string[] includes = null);
     IQueryable<TEntity> SelectAll(Expression<Func<TEntity, bool>> expression = null,string[] includes = null,
         bool isTracking = true);
 }

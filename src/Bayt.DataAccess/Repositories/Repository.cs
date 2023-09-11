@@ -17,7 +17,7 @@ public class Repository<TEntity>:IRepository<TEntity> where TEntity:Auditable
         _dbSet = _context.Set<TEntity>();
     }
     
-    public async Task CreateAsync(TEntity entity) => await _dbSet.AddAsync(entity);
+    public async ValueTask CreateAsync(TEntity entity) => await _dbSet.AddAsync(entity);
 
     public void Update(TEntity entity) => _context.Entry(entity).State = EntityState.Modified;
     
@@ -25,7 +25,7 @@ public class Repository<TEntity>:IRepository<TEntity> where TEntity:Auditable
     
     public void Destroy(TEntity entity) => _dbSet.Remove(entity);
     
-    public async Task<TEntity> SelectAsync(Expression<Func<TEntity, bool>> expression, string[] includes = null)
+    public async ValueTask<TEntity> SelectAsync(Expression<Func<TEntity, bool>> expression, string[] includes = null)
     {
         IQueryable<TEntity> entities = _dbSet.Where(expression).AsQueryable();
 
