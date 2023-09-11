@@ -5,7 +5,7 @@ using Bayt.Domain.Entities.Addresses.Regions;
 
 namespace Bayt.Domain.Entities.Addresses.Addresses;
 
-public class Address:Auditable
+public class Address : Auditable
 {
     public Guid CountryId { get; set; }
     public Country Country { get; set; }

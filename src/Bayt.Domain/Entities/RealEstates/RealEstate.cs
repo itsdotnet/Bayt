@@ -7,7 +7,7 @@ using Bayt.Domain.Enums;
 
 namespace Bayt.Domain.Entities.RealEstates;
 
-public class RealEstate:Auditable
+public class RealEstate : Auditable
 {
     public Guid CategoryId { get; set; }
     public Category Category { get; set; }
