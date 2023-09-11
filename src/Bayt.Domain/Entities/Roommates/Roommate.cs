@@ -5,7 +5,7 @@ using Bayt.Domain.Enums;
 
 namespace Bayt.Domain.Entities.Roommates;
 
-public class Roommate:Auditable
+public class Roommate : Auditable
 {
     public string Description { get; set; }
     public Whom Whom { get; set; }
