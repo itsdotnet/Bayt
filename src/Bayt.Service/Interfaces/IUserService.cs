@@ -10,6 +10,7 @@ public interface IUserService
     ValueTask<UserResultDto> AddAsync(UserCreationDto dto);
     ValueTask<UserResultDto> ModifyAsync(UserUpdateDto dto);
     ValueTask<bool> RemoveAsync(Guid id);
+    ValueTask<UserResultDto> GetByIdAsync(Guid id);
     ValueTask<IEnumerable<UserResultDto>> GetByRoleAsync(Role role);
     ValueTask<IEnumerable<UserResultDto>> GetByRealEstateAsync(Guid userId);
     ValueTask<IEnumerable<Roommate>> GetByRoommateAsync(Guid userId);
